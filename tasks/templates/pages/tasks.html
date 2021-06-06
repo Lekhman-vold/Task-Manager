@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content  %}
+ {% for task in tasks %}
+
+  <div class="row">
+    <div class="col s12 m6">
+      <div class="card blue-grey ">
+        <div class="card-content white-text">
+          <span class="card-title">{{ task.title }}</span>
+          <p>{{ task.text}}</p>
+        </div>
+        <div class="card-action">
+          <p>Status complete: {{ task.status }}</p>
+          <p>Date: {{ task.start_date }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ {% endfor %}
+
+{% endblock  %}
