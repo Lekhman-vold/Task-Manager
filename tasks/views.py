@@ -28,9 +28,3 @@ class UpdateTask(UpdateView):
         context = super(UpdateTask, self).get_context_data(**kwargs)
         context['form'] = TaskForm()
         return context
-
-# class PostListView(ListView):
-#     queryset = Post.published.all()
-#     context_object_name = 'posts'
-#     paginate_by = 3
-#     template_name = 'blog/post/list.html'

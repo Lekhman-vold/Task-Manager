@@ -5,7 +5,6 @@ app_name = 'tasks'
 
 urlpatterns = [
     path('', views.home_page, name='home_page'),
-    # path('tasks/', views.task_page, name='task_page'),
     path('tasks/', views.TaskPage.as_view(), name='task_page'),
     path('update-task/<int:pk>/', views.UpdateTask.as_view(), name='update_task')
 ]
