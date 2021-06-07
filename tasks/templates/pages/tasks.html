@@ -6,7 +6,9 @@
     <div class="col s12 m6">
       <div class="card blue-grey ">
         <div class="card-content white-text">
-          <span class="card-title">{{ task.title }}</span>
+            <a href="{% url 'tasks:update_task' pk=task.pk %}" style="color: aliceblue"><i class="material-icons" style="padding-left: 590px">edit</i></a>
+            <span class="card-title">{{ task.title }}</span>
+            <span>URL: <a href="{{ task.url }}">{{ task.url }}</a></span>
           <p>{{ task.text}}</p>
         </div>
         <div class="card-action">
